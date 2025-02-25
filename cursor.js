@@ -5,7 +5,7 @@ document.querySelectorAll("*").forEach(el => el.style.cursor = "none");
 
 //Cursor (vector)
 const customCursor = document.createElement("img");
-customCursor.src = "cursor/vector.png";
+customCursor.src = "Cursor/vector.png";
 customCursor.style.position = "fixed";
 customCursor.style.width = "30px"; 
 customCursor.style.height = "30px"; 
