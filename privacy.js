@@ -1,5 +1,5 @@
 // Array of script URLs
-const scripts = ['../../Block-DevTools/index.js', '../../Clipboard-Blocker/index.js', '../../Disable-Image-Dragging/index.js'];
+const scripts = ['../Block-DevTools/index.js', '../Clipboard-Blocker/index.js', '../Disable-Image-Dragging/index.js'];
 
 // Load all scripts
 Promise.all(scripts.map(loadScript))
