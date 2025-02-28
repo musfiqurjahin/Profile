@@ -15,6 +15,6 @@ btnIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
 
 
 //Alert on Website button click
-document.querySelector(".message-btn").addEventListener("click", function () {
-    alert("This website link is not available at the moment.");
-    });
+//document.querySelector(".message-btn").addEventListener("click", function () {
+ //   alert("This website link is not available at the moment.");
+  //  });
