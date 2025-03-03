@@ -19,8 +19,8 @@ btnIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
  //   alert("This website link is not available at the moment.");
   //  });
 
-// Open a link popup on button click
-document.querySelector(".message-btn").addEventListener("click", function () {
+    // Open a link popup on button click
+    document.querySelector(".message-btn").addEventListener("click", function () {
     // Create a new popup window
     const popup = window.open('https://musfiqurjahin.github.io/ChatBot/', 'popup', 'width=600,height=400,scrollbars=yes,resizable=yes');
 
