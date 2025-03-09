@@ -1,8 +1,83 @@
-//style element
-const style = document.createElement('style');
+// Dynamically create HTML structure
+const htmlContent = `
+<div class="card">
+      <div class="card-top">
+        <div class="card-text">
+            <h1><span class="name">Musfiqur Jahin</span>
+                <div class="verified-badge-container">
+                    <img src="Verified_Badges/Blue-badge-1.png" alt="Verified Badge" class="verified-badge" title="Verified &#x2705;">
+                </div>
+            </h1>  
+            <p>
+                <span class="accordion">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span class="text">Technophile</span>
+                </span>
+                &nbsp;
+                <span class="accordion">
+                    <i class="fa-solid fa-brain"></i>
+                    <span class="text">Programmer</span>
+                </span>
+                &nbsp;
+                <span class="accordion">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span class="text">Full Stack Dev</span>
+                </span>
+                <!--<span title="Koinophobic🙂" class="accordion"><i class="fa-solid fa-star-half-stroke"></i><span class="text">koinoPhobic</span>-->
+            </p>            
+        </div>
+        <div class="card-btn" title="Tap to Open/Close Slide🔁">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+      </div>
 
-// CSS code as string
-style.innerHTML = `
+      <div class="card-bottom">
+        <a title="Follow me on Facebook!" href="https://www.facebook.com/musfiqurjahin.official?sk=followers" target="_blank" class="follow-btn">
+          <i class="fa-solid fa-user-plus fa-shake"></i> Follow
+        </a>
+
+        <button class="message-btn" title="Under Construction" onclick="event.preventDefault();">
+          <i class="fa-solid fa-sign-in"></i> Website
+        </button>        
+
+       <!-- <button class="message-btn" title="Under Construction" onclick="window.open('https://sites.google.com/view/musfiqurjahin', '_blank')">
+          <i class="fa-solid fa-sign-in"></i> Website
+        </button> -->       
+      </div>
+
+      <div class="card-slide">
+           <!--<div class="intro">
+            <h1>Hi, I'm Jahin.</h1>
+            <p>A passionate Programmer dedicated to building innovative solutions and shaping the digital world.</p>
+            <p>With a relentless drive for learning and creating, I’m constantly exploring new technologies and pushing the boundaries of what’s possible.</p>
+            <p>Coding is not just my skill; it’s my passion and my path to building something great :D</p>
+        </div>
+        <hr style="border: none; height: 2px; width: 80%; background: linear-gradient(to right, rgba(0, 123, 255, 0.5), rgba(0, 123, 255, 1), rgba(0, 123, 255, 0.5)); border-radius: 5px; margin: 20px auto; backdrop-filter: blur(5px);">
+        <div style="height: 30px;"></div>-->
+        <h1>Social Links:</h1>
+        <div class="social-icons">
+            <a title="linkedin" href="https://www.linkedin.com/in/musfiqurjahin"><i class="fa-brands fa-linkedin-in fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 0s; animation-iteration-count: 1;"></i></a>
+            <a title="Instagram" href="https://instagram.com/musfiqur_jahin"><i class="fa-brands fa-instagram fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 3s; animation-iteration-count: 1;"></i></a>
+            <a title="Facebook" href="https://facebook.com/musfiqurjahin"><i class="fa-brands fa-facebook fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 6s; animation-iteration-count: 1;"></i></a>
+            <a title="Github" href="https://github.com/musfiqurjahin"><i class="fa-brands fa-github fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 9s; animation-iteration-count: 1;"></i></a>
+            <a title="X (Formerly Twitter)" href="https://x.com/musfiqur_jahin"><i class="fa-brands fa-x-twitter fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 12s; animation-iteration-count: 1;"></i></a>
+            <a title="Threads" href="https://www.threads.net/@musfiqur_jahin"><i class="fa-brands fa-threads fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 15s; animation-iteration-count: 1;"></i></a>
+            <a title="WhatsApp" href="https://wa.me/8801701630977"><i class="fa-brands fa-whatsapp fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 18s; animation-iteration-count: 1;"></i></a>
+            <a title="YouTube" href="https://youtube.com/@musfiqurjahin"><i class="fa-brands fa-youtube fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 21s; animation-iteration-count: 1;"></i></a>
+            <a title="Telegram" href="https://t.me/musfiqurjahin"><i class="fa-brands fa-telegram fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 24s; animation-iteration-count: 1;"></i></a>
+            <a title="Mail" href="mailto:musfiqur.jahin@gmail.com"><i class="fa-solid fa-envelope fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 27s; animation-iteration-count: 1;"></i></a>
+            <a title="Phone" href="tel:+8801701630977"><i class="fa-solid fa-phone fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 30s; animation-iteration-count: 1;"></i></a>
+            <a title="WEB" href="https://musfiqurjahin.github.io/"><i class="fa-solid fa-globe fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 33s; animation-iteration-count: 1;"></i></a>
+          </div>          
+        <div style="height: 100px;"></div>
+      </div>
+    </div>
+`;
+
+document.body.innerHTML = htmlContent;
+
+
+const styles = `
 * {
     font-family: "VT323", monospace;
     text-decoration: none;
@@ -187,7 +262,7 @@ html, body {
 
 .card-slide h1 {
     color: rgb(0, 119, 255);
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: 900;
     word-spacing: -1px;
     justify-content: center;
@@ -227,21 +302,21 @@ html, body {
 
 .social-icons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin: 20px;
 }
 
 .social-icons a {
     background: #007bff;
-    padding: 15px;
-    margin: 15px 15px;
+    padding: 12px;
+    margin: 12px 12px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     border-radius: 50px;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight:lighter;
     color: #ffffff;
     transition: 0.5s ease;
-    border: 1px solid white;
+    border: none;
 }
 
 .social-icons a:hover {
@@ -415,80 +490,15 @@ p {
     opacity: 1;
 }
 `;
-// Append the style element to the head
-document.head.appendChild(style);
 
-// Add HTML dynamically
-document.body.innerHTML = `
-    <div class="card">
-      <div class="card-top">
-        <div class="card-text">
-            <h1><span class="name">Musfiqur Jahin</span>
-                <div class="verified-badge-container">
-                    <img src="Verified_Badges/Blue-badge-1.png" alt="Verified Badge" class="verified-badge" title="Verified &#x2705;">
-                </div>
-            </h1>  
-            <p>
-                <span class="accordion">
-                    <i class="fa-solid fa-microchip"></i>
-                    <span class="text">Technophile</span>
-                </span>
-                &nbsp;
-                <span class="accordion">
-                    <i class="fa-solid fa-brain"></i>
-                    <span class="text">Programmer</span>
-                </span>
-                &nbsp;
-                <span class="accordion">
-                    <i class="fa-solid fa-laptop-code"></i>
-                    <span class="text">Full Stack Dev</span>
-                </span>
-                <!--<span title="Koinophobic🙂" class="accordion"><i class="fa-solid fa-star-half-stroke"></i><span class="text">koinoPhobic</span>-->
-            </p>            
-        </div>
-        <div class="card-btn" title="Tap to Open/Close Slide🔁">
-            <i class="fas fa-chevron-up"></i>
-        </div>
-      </div>
+// Create a style element and append the CSS to it
+const styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = styles;
+document.head.appendChild(styleSheet);
 
-      <div class="card-bottom">
-        <a title="Follow me on Facebook!" href="https://www.facebook.com/musfiqurjahin.official?sk=followers" target="_blank" class="follow-btn">
-          <i class="fa-solid fa-user-plus fa-shake"></i> Follow
-        </a>
 
-        <button class="message-btn" title="Under Construction">
-          <i class="fa-solid fa-sign-in" ></i>Website
-        </button>
-      </div>
-
-      <div class="card-slide">
-        <!--<div class="intro">
-            <h1>Hi, I'm Jahin.</h1>
-            <p>A passionate Programmer dedicated to building innovative solutions and shaping the digital world.</p>
-            <p>With a relentless drive for learning and creating, I’m constantly exploring new technologies and pushing the boundaries of what’s possible.</p>
-            <p>Coding is not just my skill; it’s my passion and my path to building something great :D</p>
-        </div>
-        <div style="height: 10px;"></div>-->
-        <h1>Social Links:</h1>
-        <div class="social-icons">
-            <a title="linkedin" href="https://www.linkedin.com/in/musfiqurjahin"><i class="fa-brands fa-linkedin-in fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 0s; animation-iteration-count: 1;"></i></a>
-            <a title="Instagram" href="https://instagram.com/musfiqur_jahin"><i class="fa-brands fa-instagram fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 3s; animation-iteration-count: 1;"></i></a>
-            <a title="Facebook" href="https://facebook.com/musfiqurjahin"><i class="fa-brands fa-facebook fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 6s; animation-iteration-count: 1;"></i></a>
-            <a title="Github" href="https://github.com/musfiqurjahin"><i class="fa-brands fa-github fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 9s; animation-iteration-count: 1;"></i></a>
-            <a title="X (Formerly Twitter)" href="https://x.com/musfiqur_jahin"><i class="fa-brands fa-x-twitter fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 12s; animation-iteration-count: 1;"></i></a>
-            <a title="Threads" href="https://www.threads.net/@musfiqur_jahin"><i class="fa-brands fa-threads fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 15s; animation-iteration-count: 1;"></i></a>
-            <a title="WhatsApp" href="https://wa.me/8801701630977"><i class="fa-brands fa-whatsapp fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 18s; animation-iteration-count: 1;"></i></a>
-            <a title="YouTube" href="https://youtube.com/@musfiqurjahin"><i class="fa-brands fa-youtube fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 21s; animation-iteration-count: 1;"></i></a>
-            <a title="Telegram" href="https://t.me/musfiqurjahin"><i class="fa-brands fa-telegram fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 24s; animation-iteration-count: 1;"></i></a>
-            <a title="Mail" href="mailto:musfiqur.jahin@gmail.com"><i class="fa-solid fa-envelope fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 27s; animation-iteration-count: 1;"></i></a>
-            <a title="Phone" href="tel:+8801701630977"><i class="fa-solid fa-phone fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 30s; animation-iteration-count: 1;"></i></a>
-            <a title="WEB" href="https://musfiqurjahin.github.io/"><i class="fa-solid fa-globe fa-bounce" style="animation-duration: 3s; transition: animation-duration 0.1s; animation-delay: 33s; animation-iteration-count: 1;"></i></a>
-          </div>          
-        <div style="height: 100px;"></div>
-      </div>
-    </div>
-`;
-
+//Script//
 let btn = document.querySelector(".card-btn");
 let cardSlide = document.querySelector(".card-slide");
 
@@ -506,17 +516,17 @@ btnIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
 
 
 //Alert on Website button click
-document.querySelector(".message-btn").addEventListener("click", function () {
-    alert("This website link is not available at the moment.");
+//document.querySelector(".message-btn").addEventListener("click", function () {
+ //   alert("This website link is not available at the moment.");
+  //  });
+
+    // Open a link popup on button click
+    document.querySelector(".message-btn").addEventListener("click", function () {
+    // Create a new popup window
+    const popup = window.open('https://musfiqurjahin.github.io/ChatBot/', 'popup', 'width=600,height=400,scrollbars=yes,resizable=yes');
+
+    // Check if popup is blocked
+    if (!popup) {
+        alert("Popup is blocked. Please allow popups for this site.");
+    }
 });
-
-// Array of script URLs
-const scripts = ['../../Block-DevTools/index.js', '../../Clipboard-Blocker/index.js', '../../Disable-Image-Dragging/index.js'];
-
-// Load all scripts
-Promise.all(scripts.map(loadScript))
-    .then(messages => {
-        messages.forEach(message => console.log(message));
-        console.log("All scripts loaded successfully!");
-    })
-    .catch(error => console.error(error));
