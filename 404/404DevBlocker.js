@@ -3,7 +3,7 @@ function blockDeveloperTools() {
     document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
         //alert("Right-click is disabled for this website.");
-        window.location.reload();
+        window.location.href = "#";
     });
 
     document.addEventListener('keydown', function(e) {
@@ -11,7 +11,7 @@ function blockDeveloperTools() {
         if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || (e.ctrlKey && e.keyCode === 85)) {
             e.preventDefault();
             //alert("Developer tools are disabled on this website.");
-            window.location.reload();
+            window.location.href = "#";
         }
     });
 }
