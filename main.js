@@ -302,7 +302,7 @@ html, body {
 
 .social-icons {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: 20px;
 }
 
@@ -312,7 +312,7 @@ html, body {
     margin: 12px 12px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     border-radius: 50px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight:lighter;
     color: #ffffff;
     transition: 0.5s ease;
